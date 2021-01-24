@@ -7,7 +7,7 @@ import NewsHabr from "./components/Habr/NewsHabr";
 import MyTweets from "./components/MyTweets/MyTweets";
 import Navbar from "./components/Navnar";
 import NewsTutby from "./components/NewsTutBy/NewsTutby";
-import SavedTweets from "./components/SavedTweets/SavedTweets";
+import Home from "./components/Home/Home";
 //import dataTweets from "./dataTweets";
 
 //styles
@@ -50,7 +50,7 @@ function App() {
               />
             )}
           />
-          <Route path="/savedtweets" render={() => <SavedTweets />} />
+          <Route path="/home" render={() => <Home />} />
           <Route path="/newstutby" render={() => <NewsTutby />} />
           <Route path="/newshabr" render={() => <NewsHabr />} />
           <Route path="/finance" render={() => <Finance />} />

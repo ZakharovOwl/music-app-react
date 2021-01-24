@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 //components
 import CreateTweet from "./TweetsDetals/CreateTweet";
 import FilterTweets from "./TweetsDetals/FilterTweets";

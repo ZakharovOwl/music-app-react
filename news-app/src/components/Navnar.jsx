@@ -20,11 +20,11 @@ const Navbar = () => {
         </li>
         <li>
           <NavLink
-            to="/savedtweets"
+            to="/home"
             activeClassName="link_active"
             className="list__link"
           >
-            Saved Tweets
+            Home
           </NavLink>
         </li>
         <li>
