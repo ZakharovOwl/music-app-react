@@ -2,6 +2,8 @@ import React from "react";
 import Tweet from "./Tweet";
 
 const TweetList = ({
+  data,
+  setData,
   name,
   tweets,
   setTweets,
@@ -12,6 +14,8 @@ const TweetList = ({
     <div className="tweets-list-wrapper">
       {tweetsFilter.map((tweet) => (
         <Tweet
+          data={data}
+          setData={setData}
           name={name}
           tweet={tweet}
           setTweets={setTweets}

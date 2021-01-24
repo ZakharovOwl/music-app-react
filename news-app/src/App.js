@@ -8,16 +8,21 @@ import MyTweets from "./components/MyTweets/MyTweets";
 import Navbar from "./components/Navnar";
 import NewsTutby from "./components/NewsTutBy/NewsTutby";
 import SavedTweets from "./components/SavedTweets/SavedTweets";
+//import dataTweets from "./dataTweets";
 
 //styles
 import "./styles/App.scss";
 
 function App() {
+  let dataTweets = localStorage.getItem("dataTweets");
+  dataTweets = JSON.parse(dataTweets);
+
   const [name, setName] = useState("Tony Stark");
-  const [textInput, setTextInput] = useState("");
-  const [tweets, setTweets] = useState([]);
+  const [textInput, setTextInput] = useState("What's happening?");
+  const [data, setData] = useState(dataTweets);
+  const [tweets, setTweets] = useState(data);
   const [textInputFilter, setTextInputFilter] = useState("");
-  const [tweetsFilter, setTweetsFilter] = useState([]);
+  const [tweetsFilter, setTweetsFilter] = useState(data);
 
   return (
     <BrowserRouter>
@@ -28,6 +33,8 @@ function App() {
             path="/mytweets"
             render={() => (
               <MyTweets
+                data={data}
+                setData={setData}
                 name={name}
                 setName={setName}
                 textInput={textInput}

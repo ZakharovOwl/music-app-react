@@ -1,7 +1,19 @@
+.tweets-wrapper {
+  display: grid;
+
+  grid-template-areas:
+    "create filter"
+    "tweets trends";
+  grid-template-rows: 9rem 2fr;
+  grid-template-columns: 6fr 1fr;
+  grid-gap: 3px;
+  background-color: black;
+  min-height: 100vh;
+}
+
 .tweets-create-wrapper {
   grid-area: create;
-  background-color: #1b384a;
-  width: 100%;
+  background-color: #16202a;
   color: #c6e3fa;
   display: flex;
   flex-direction: column;
@@ -12,7 +24,7 @@
   h3 {
     display: flex;
     width: 100%;
-    margin: 15px;
+    margin: 5px;
     align-items: center;
     justify-content: center;
   }
@@ -23,18 +35,16 @@
     justify-content: center;
     align-items: center;
     color: #c6e3fa;
-    flex-direction: column;
 
     &-btn {
-      background: #00acee;
-      width: 75px;
-      height: 42px;
-      border-radius: 46%;
+      background: #1a8dc2;
+      width: 150px;
+      height: 50px;
+      border-radius: 37px;
       border: none;
-      color: #141f27;
-      font-size: 16px;
-      margin: 3px;
-      margin-left: 61%;
+      color: #ffffff;
+      font-size: 17px;
+      margin: 5px;
       cursor: pointer;
     }
     &-btn:hover {
@@ -43,12 +53,12 @@
     }
 
     .textarea-tweet {
-      background-color: black;
+      background-color: #314152;
       color: #c6e3fa;
       padding: 10px;
       width: 70%;
-      height: 70px;
-      border-radius: 11px;
+      height: 55px;
+      border-radius: 53px;
       border: none;
       outline: none;
     }
@@ -57,17 +67,15 @@
 
 .tweets-list-wrapper {
   grid-area: tweets;
-  background-color: #1b384a;
+  background-color: #16202a;
   border-radius: 15px;
-
-  width: 100%;
 }
 .filter-tweets-wrapper {
   grid-area: filter;
-  background-color: #141f27;
+  width: 20vw;
+  background-color: #16202a;
   flex-direction: column;
 
-  width: 20vw;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +88,7 @@
   }
 
   .textarea-filter {
-    background-color: #1a8dc2;
+    background-color: #364658;
     color: #141f27;
     padding: 10px;
     width: 80%;
@@ -93,26 +101,29 @@
 
 .trends-wrapper {
   grid-area: trends;
-  background-color: #205370;
+  background-color: #16202a;
   border-radius: 15px;
-
   width: 20vw;
 }
 
 .tweet-wrapper {
   display: flex;
-  flex-direction: column;
-  background-color: #205370;
+  justify-content: space-between;
   border-radius: 15px;
-  margin: 7px;
-  padding: 17px;
+  margin: 5px;
+  padding: 5px;
 
   img {
-    width: 25px;
-    height: 25px;
+    width: 20px;
+    height: 20px;
     cursor: pointer;
     margin: 5px;
   }
+/*   img.chi {
+    background: #7cb9ef;
+    border-radius: 50%;
+    padding: 5px;
+  } */
   .img-btns:hover {
     cursor: pointer;
     transform: scale(0.9);
@@ -120,6 +131,9 @@
 
   .tweet-user {
     display: flex;
+    width: 100%;
+    border: 1px solid #205370;
+    border-radius: 15px;
 
     &-ava {
       width: 110px;
@@ -144,8 +158,27 @@
     }
   }
 
-  .tweet-btns {
+  .tweet-info {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    margin: 5px;
+    justify-content: inherit;
+
+    .tweet-btns {
+      display: flex;
+      justify-content: flex-end;
+      margin-left: 20px;
+    }
+
+    .tweet-time {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p{
+        display: flex;
+        font-size: 11px;
+        color: white;
+      }
+    }
   }
 }

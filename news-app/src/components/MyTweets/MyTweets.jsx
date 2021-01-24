@@ -6,6 +6,8 @@ import Trends from "./TweetsDetals/Trends";
 import TweetList from "./TweetsDetals/TweetList";
 
 const MyTweets = ({
+  data,
+  setData,
   name,
   setName,
   textInput,
@@ -18,9 +20,13 @@ const MyTweets = ({
   setTweetsFilter,
 }) => {
   return (
-    <div>
+    <div className="tweets-wrapper">
       <CreateTweet
+        data={data}
+        setData={setData}
         className="tweets-create"
+        name={name}
+        setName={setName}
         textInput={textInput}
         setTextInput={setTextInput}
         tweets={tweets}
@@ -29,6 +35,8 @@ const MyTweets = ({
         setTweetsFilter={setTweetsFilter}
       />
       <TweetList
+        data={data}
+        setData={setData}
         name={name}
         tweets={tweets}
         setTweets={setTweets}

@@ -15,9 +15,8 @@ h3 {
 h3,
 h4 {
   font-weight: 400;
-  color: grey;
+  color: #d0cdcd;
 }
-
 
 .app-wrapper {
   display: grid;
@@ -26,24 +25,20 @@ h4 {
     "nav content"
     "nav content";
   grid-template-rows: 7rem 1fr;
-  grid-template-columns: 2fr 10fr;
+  grid-template-columns: 0fr 1fr;
   grid-gap: 3px;
+  min-height: 100vh;
+  background-color: black;
 }
 
 nav {
   grid-area: nav;
-  background-color: aqua;
-
-  &-wrapper {
-    max-width: 25vw;
-  }
+  width: 15vw;
+  background-color: #205370;
+  border-radius: 15px;
 }
 
 .content {
   grid-area: content;
   background-color: rgb(199, 181, 149);
-
-  &-wrapper {
-    max-width: 75vw;
-  }
 }
