@@ -1,4 +1,5 @@
 @import "./MyTweets";
+@import "./Navnar";
 
 * {
   margin: 0;
@@ -34,7 +35,6 @@ h4 {
 nav {
   grid-area: nav;
   width: 15vw;
-  background-color: #205370;
   border-radius: 15px;
 }
 

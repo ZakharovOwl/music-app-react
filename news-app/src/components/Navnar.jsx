@@ -4,23 +4,57 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav>
-        <ul>
-          <li>
-            <NavLink to="/mytweets">My tweets</NavLink>
-          </li>
-          <li>
-            <NavLink to="/savedtweets">Saved Tweets</NavLink>
-          </li>
-          <li>
-            <NavLink to="/newstutby">TUT.by</NavLink>
-          </li>
-          <li>
-            <NavLink to="/newshabr">Habr</NavLink>
-          </li>
-          <li>
-            <NavLink to="/finance">Finance</NavLink>
-          </li>
-        </ul>
+      <a className="github" href="https://github.com/ZakharovOwl">
+        <p>github.com</p>
+        <p>ZakharovOwl</p>
+      </a>
+      <ul>
+        <li>
+          <NavLink
+            to="/mytweets"
+            activeClassName="link_active"
+            className="list__link"
+          >
+            My tweets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/savedtweets"
+            activeClassName="link_active"
+            className="list__link"
+          >
+            Saved Tweets
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/newstutby"
+            activeClassName="link_active"
+            className="list__link"
+          >
+            TUT.by
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/newshabr"
+            activeClassName="link_active"
+            className="list__link"
+          >
+            Habr
+          </NavLink>
+        </li>
+        <li>
+          <NavLink
+            to="/finance"
+            activeClassName="link_active"
+            className="list__link"
+          >
+            Finance
+          </NavLink>
+        </li>
+      </ul>
     </nav>
   );
 };
