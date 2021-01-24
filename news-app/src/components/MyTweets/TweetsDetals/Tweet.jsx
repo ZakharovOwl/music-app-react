@@ -72,7 +72,7 @@ const Tweet = ({
           <img
             onClick={editTweet}
             className="img-btns edit"
-            src="https://www.flaticon.com/svg/static/icons/svg/860/860763.svg"
+            src="https://img.icons8.com/pastel-glyph/2x/ffffff/edit.png"
             alt="edit-img"
           />
           <img

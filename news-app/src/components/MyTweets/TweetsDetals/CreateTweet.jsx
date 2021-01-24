@@ -24,7 +24,7 @@ const CreateTweet = ({
     let timeSubmit = new Date().toLocaleString();
 
     //LOCAL
-    let dataTwts = data
+    let dataTwts = data;
     localStorage.setItem(
       `dataTweets`,
       JSON.stringify([
@@ -50,31 +50,38 @@ const CreateTweet = ({
   const sumbmitEnter = (event) => {
     let timeSubmit = new Date().toLocaleString();
     if (event.keyCode === 13) {
-       //LOCAL
-       let dataTwts = data
-       localStorage.setItem(
-         `dataTweets`,
-         JSON.stringify([
-           ...tweets,
-           {
-             message: textInput,
-             id: uuidv4(),
-             name: name,
-             timeSubmit: timeSubmit,
-           },
-         ])
-       );
-       dataTwts = localStorage.getItem("dataTweets");
-       dataTwts = JSON.parse(dataTwts);
-       console.log(dataTwts);
+      //LOCAL
+      let dataTwts = data;
+      localStorage.setItem(
+        `dataTweets`,
+        JSON.stringify([
+          ...tweets,
+          {
+            message: textInput,
+            id: uuidv4(),
+            name: name,
+            timeSubmit: timeSubmit,
+          },
+        ])
+      );
+      dataTwts = localStorage.getItem("dataTweets");
+      dataTwts = JSON.parse(dataTwts);
+      console.log(dataTwts);
 
-       //LOCAl
+      //LOCAl
       setData([...dataTwts]);
       setTweets([...dataTwts]);
       setTweetsFilter([...dataTwts]);
       setTextInput("");
-
     }
+  };
+
+  //Func update posts older/ newest
+  const olderPosts = () => {
+    let dataTwts = data.reverse();
+    setData([...dataTwts]);
+    setTweets([...dataTwts]);
+    setTweetsFilter([...dataTwts]);
   };
 
   return (
@@ -95,6 +102,11 @@ const CreateTweet = ({
         ></textarea>
         <button className="form-tweet-btn">Submit</button>
       </form>
+      <div>
+        <div onClick={olderPosts} className="update-btn">
+          <img src="https://img.icons8.com/nolan/2x/ffffff/align-right.png" alt="align-right"/>
+        </div>
+      </div>
     </div>
   );
 };

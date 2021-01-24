@@ -11,6 +11,7 @@ const TweetList = ({
   setTweetsFilter,
 }) => {
   return (
+    
     <div className="tweets-list-wrapper">
       {tweetsFilter.map((tweet) => (
         <Tweet
